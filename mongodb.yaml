@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  mongo:
+    image: mongo
+    ports:
+      -27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNANME: abdul
+      - MONGO_INITDBB_ROOT_PASSWORD: rehman
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      -8081:8081
+    environment:
+      ME_CONFIG_MONGO_ADMINUSERNANME: abdul
+      ME_CONFIG_MONGO_ADMINPASSWORD: rehman
+      ME_CONFIG_MONGO_URL: monogdb://abdul:rehman@mongo:27017/
+       
+    
