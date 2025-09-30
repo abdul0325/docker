@@ -9,6 +9,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNANME: abdul
       - MONGO_INITDBB_ROOT_PASSWORD: rehman
+    volumes:
+      - host_dir:container_dir
 
   mongo-express:
     image: mongo-express
